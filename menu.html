@@ -1,0 +1,57 @@
+<html>
+
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <style>
+        .icon-bar {
+            height: 40px;
+            background-color: #ddd;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .icon-bar a {
+            font-size: 40px;
+            color: cornflowerblue;
+            text-align: center;
+            width: 100%;
+        }
+
+        .active {
+            background-color: orange;
+        }
+
+        a:hover {
+            background-color: orange;
+            opacity: 0.4;
+        }
+
+    </style>
+
+    <script>
+        function changeTab(event) {
+            console.log('event ', event.target.id);
+            const active = document.querySelector('.active');
+            active.classList.remove('active');
+            const newFocus = event.target;
+            newFocus.classList.add('active');
+        }
+
+    </script>
+
+    <body>
+
+        <div class="icon-bar">
+            <a href="#" class="active" onclick={changeTab} id="home"><i class="fa fa-home"></i></a>
+            <a href="#" class="" onclick={changeTab} id="search"><i class="fa fa-search"></i></a>
+            <a href="#" class="" onclick={changeTab} id="trash"><i class="fa fa-trash"></i></a>
+            <a href="#" class="" onclick={changeTab} id="globe"><i class="fa fa-globe"></i></a>
+        </div>
+
+
+
+    </body>
+
+</html>
